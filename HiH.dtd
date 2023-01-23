@@ -1,0 +1,63 @@
+<!ELEMENT dogpedia (author, dogs, brands)>
+    <!ELEMENT author (name, surname, group, number)>
+        <!ELEMENT name (#PCDATA)>
+        <!ELEMENT surname (#PCDATA)>
+        <!ELEMENT group (#PCDATA)>
+        <!ENTITY myGroup "1">
+        <!ELEMENT number (#PCDATA)>
+    <!ELEMENT dogs (blue, dog+)>
+        <!ELEMENT blue (name, breed, image?, birth, death?, color, home, friends?, enemies?, nicknames?, cuddly, dailyroutine)>
+            <!ELEMENT breed (known|unknown)>
+                <!ELEMENT known (#PCDATA)>
+                <!ELEMENT unknown (#PCDATA)>
+            <!ELEMENT image (#PCDATA)>
+            <!ELEMENT birth (#PCDATA)>
+            <!ELEMENT death (#PCDATA)>
+            <!ELEMENT color (#PCDATA)>
+            <!ELEMENT home (#PCDATA)>
+            <!ELEMENT friends (friend+)>
+                <!ELEMENT friend (#PCDATA)>
+            <!ELEMENT enemies (enemy+)>
+                <!ELEMENT enemy (#PCDATA)>
+            <!ELEMENT nicknames (nickname+)>
+                <!ELEMENT nickname (#PCDATA)>
+            <!ELEMENT cuddly (#PCDATA)>
+            <!ELEMENT dailyroutine (excercise, meals, sleep)>
+                <!ELEMENT excercise (walks, playing)>
+                    <!ELEMENT walks (#PCDATA)>
+                    <!ELEMENT playing (#PCDATA)>
+                <!ELEMENT meals (description, times)>
+                    <!ELEMENT description (#PCDATA)>
+                    <!ELEMENT times (#PCDATA)>
+                <!ELEMENT sleep (amount, places)>
+                    <!ELEMENT amount (#PCDATA)>
+                    <!ELEMENT places (place+)>
+                        <!ELEMENT place (#PCDATA)>
+        <!ELEMENT dog (name, breed, image?, birth, death?, color, home, friends?, enemies?, nicknames?, cuddly)>
+    <!ELEMENT brands (brand+)>
+        <!ELEMENT brand (name, about, products)>
+            <!ELEMENT about (#PCDATA)>
+            <!ELEMENT products (product+)>
+                <!ELEMENT product (productName, price, link)>
+                    <!ELEMENT productName (#PCDATA)>
+                    <!ELEMENT price (#PCDATA)>
+                    <!ELEMENT link (#PCDATA)>
+<!ENTITY blueName "Blueberry">                 
+<!ATTLIST author liked (yes|no) "yes">
+<!ATTLIST brand liked (yes|no) #REQUIRED>
+<!ATTLIST blue alive (yes|no) #REQUIRED>
+<!ATTLIST blue paws CDATA #REQUIRED>
+<!ATTLIST blue tails CDATA #REQUIRED>
+<!ATTLIST blue ears (droopy|upright|no) #REQUIRED>
+<!ATTLIST blue bark (yes|no) #REQUIRED>
+<!ATTLIST dog alive (yes|no) #REQUIRED>
+<!ATTLIST dog paws CDATA #REQUIRED>
+<!ATTLIST dog tails CDATA #REQUIRED>
+<!ATTLIST dog ears (droopy|upright|no) #REQUIRED>
+<!ATTLIST dog bark (yes|no) #REQUIRED>
+<!ATTLIST place daytime (yes|no) #REQUIRED>
+<!ATTLIST place nighttime (yes|no) #REQUIRED>
+<!ATTLIST image source CDATA #REQUIRED>
+<!ATTLIST link source CDATA #REQUIRED>
+<!ATTLIST brand category CDATA #REQUIRED>
+<!ATTLIST dogpedia xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance">

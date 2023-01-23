@@ -1,0 +1,121 @@
+body{
+    overflow: scroll;
+    background-size: cover;
+    margin: 0 0 0 0;
+    background-repeat: no-repeat;
+    background-image: url("img/borówki2.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    color: rgb(49, 49, 49);
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 6.51vw;
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.27vw;
+    color: rgb(49, 49, 49);
+}
+
+.content{
+    background: white;
+    margin-left: 7vw;
+    margin-right: 7vw;
+    margin-top: 1.15vw;
+    margin-bottom: 1.15vw;
+    padding: 3vw;
+    width: 80vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.content h2{
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.5vw;
+    color: rgb(49, 49, 49);
+}
+
+.content p{
+    font-size: 1.15vw;
+    text-align: justify;
+}
+
+.content td, th{
+    border: 2px solid black;
+    text-align: center;
+}
+
+#biography{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#biography img{
+    height: 28vw;
+}
+
+#biography p{
+    width: 30vw;
+}
+
+.section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 31vw;
+    width: 62vw;
+}
+
+#day-in-the-life p{
+    width: 50vw;
+}
+
+#barklist{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#barklist th, tr{
+    font-size: 1.15vw;
+}
+
+.content table{
+    width: 30vw;
+    border: 2px solid black;
+}
+
+#names ul{
+    font-size: 1.15vw;
+}
+
+#up-container{
+    display: block;
+    text-align: right;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+#up{
+    text-decoration: none;
+    color: rgb(49, 49, 49);
+    font-size: 1.15vw;
+}
+
+div:nth-child(6){
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+#up-container::first-line {
+    text-transform: uppercase;
+  }

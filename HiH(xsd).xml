@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dogpedia xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="HiH.xsd">
+
+    <author liked="yes">
+        <name>Olivier</name>
+        <surname>Stankiewicz</surname>
+        <group>1</group>
+        <number>193454</number>
+    </author>
+
+    <dogs>
+        <blue alive="yes" paws="4" tails="1" ears="droopy" bark="yes">
+            <name>Blueberry</name>
+            <breed>
+                <known>Maltipoo</known>
+            </breed>
+            <image source="img/blubon.jpeg">photo of Blue</image>
+            <birth>2021</birth>
+            <color>white, black and blonde</color>
+            <home>Gdańsk</home>
+            <friends>
+                <friend>Benji</friend>
+                <friend>Frania</friend>
+                <friend>Kiara</friend>
+                <friend>Odie</friend>
+            </friends>
+            <enemies>
+                <enemy>Nela</enemy>
+            </enemies>
+            <nicknames>
+                <nickname>Blue</nickname>
+                <nickname>Bibi</nickname>
+                <nickname>Bibulek</nickname>
+                <nickname>Gigi</nickname>
+                <nickname>Biba</nickname>
+            </nicknames>
+            <cuddly>true</cuddly>
+
+            <dailyroutine>
+                <excercise>
+                    <walks>at least 3 times a day for 10-30 minutes</walks>
+                    <playing>playing with toys and searching for treats</playing>
+                </excercise>
+                <meals>
+                    <description>3 a day, 40 grams of dry food consisting of various meats, wheat, rice, fruits, yeast and more</description>
+                    <times>07:50:00 14:30:00 19:00:00</times>
+                </meals>
+                <sleep>
+                    <amount>about 7 hours during the night and very many naps during the day</amount>
+                    <places>
+                        <place daytime="yes" nighttime="no">dog bed</place>
+                        <place daytime="yes" nighttime="no">blanket</place>
+                        <place daytime="yes" nighttime="no">couch</place>
+                        <place daytime="yes" nighttime="no">bed</place>
+                        <place daytime="yes" nighttime="yes">floor</place>
+                        <place daytime="no" nighttime="yes">pillow</place>
+                    </places>
+                </sleep>
+            </dailyroutine>
+        </blue>
+
+        <dog alive="yes" paws="4" tails="1" ears="upright" bark="no">
+            <name>Benji</name>
+            <breed>
+                <known>Basenji</known>
+            </breed>
+            <image source="img/wenji.jpeg">photo of Benji</image>
+            <birth>2022</birth>
+            <color>brown, white</color>
+            <home>Bydgoszcz</home>
+            <friends>
+                <friend>Figa</friend>
+                <friend>Blueberry</friend>
+            </friends>
+            <nicknames>
+                <nickname>Wędzi</nickname>
+                <nickname>Benjutek</nickname>
+                <nickname>Benjas</nickname>
+                <nickname>Wędżutek</nickname>
+                <nickname>Beniutas</nickname>
+            </nicknames>
+            <cuddly>false</cuddly>
+        </dog>
+
+        <dog alive="yes" paws="4" tails="1" ears="upright" bark="yes">
+            <name>Diego</name>
+            <breed>
+                <known>German Shepherd</known>
+            </breed>
+            <image source="img/diegon.JPG">photo of Diego</image>
+            <birth>2020</birth>
+            <color>black, brown</color>
+            <home>Orzełek</home>
+            <friends>
+                <friend>Miauczuk</friend>
+            </friends>
+            <enemies>
+                <enemy>every dog</enemy>
+            </enemies>
+            <nicknames>
+                <nickname>Dieguś</nickname>
+            </nicknames>
+            <cuddly>false</cuddly>
+        </dog>
+
+        <dog alive="no" paws="4" tails="1" ears="droopy" bark="yes">
+            <name>Shati</name>
+            <breed>
+                <known>Yorkshire Terrier</known>
+            </breed>
+            <birth>2008</birth>
+            <death>2019</death>
+            <color>black, brown</color>
+            <home>Bydgoszcz</home>
+            <nicknames>
+                <nickname>Shmati</nickname>
+                <nickname>Shmatka</nickname>
+                <nickname>Shatka</nickname>
+            </nicknames>
+            <cuddly>true</cuddly>
+        </dog>
+
+        <dog alive="yes" paws="1" tails="2" ears="no" bark="yes">
+            <name>Burek</name>
+            <breed>
+                <unknown>unknown</unknown>
+            </breed>
+            <birth>2015</birth>
+            <color>yellow</color>
+            <home>Boguty-Pianki</home>
+            <friends>
+                <friend>Azor</friend>
+                <friend>Fafik</friend>
+                <friend>Tofik</friend>
+            </friends>
+            <cuddly>false</cuddly>
+        </dog>
+    </dogs>
+
+    <brands>
+        <brand category="accessories" liked="yes">
+            <name>Trixie</name>
+            <about>
+                Trixie is a brand of accessories for dogs such as: leashes, dog harnesses, bowls, transporters, toys, dog care products and much more. They have been around since 1974 and have maintained a very good reputation ever since.
+            </about>
+            <products>
+                <product>
+                    <productName>medium dog poop bags 4 rolls</productName>
+                    <price>7.99</price>
+                    <link source="https://animalia.pl/trixie-4-rolki-torebek-na-psie-odchody-czarne-4x-20-szt/szczegoly/20689/">product page</link>
+                </product>
+                <product>
+                    <productName>ball 6cm</productName>
+                    <price>11.10</price>
+                    <link source="https://animalia.pl/trixie-pilki-pyszczki-6-cm/szczegoly/3024/">product page</link>
+                </product>
+                <product>
+                    <productName>eye cleaninig pads - 100pcs</productName>
+                    <price>28.25</price>
+                    <link source="https://animalia.pl/trixie-eye-care-platki-do-czyszczenia-oczu-w-pojemniku-100-szt/szczegoly/42499/">product page</link>
+                </product>
+                <product>
+                    <productName>large diapers for puppies - 10pcs</productName>
+                    <price>25.25</price>
+                    <link source="https://animalia.pl/trixie-pieluchy-dla-szczeniat-duze-60-x-60-cm-10-szt/szczegoly/21643/">product page</link>
+                </product>
+                <product>
+                    <productName>toothbrush for dogs - 2pcs</productName>
+                    <price>5.90</price>
+                    <link source="https://animalia.pl/trixie-szczotki-do-zebow-i-masazu-zakladane-na-palec-2-szt/szczegoly/3118/">product page</link>
+                </product>
+            </products>
+        </brand>
+
+        <brand category="food and treats" liked="yes">
+            <name>Brit</name>
+            <about>
+                Brit is a brand of dog food and treats. They offer a wide variety of products, which contain from salmon to lamb. This brand puts emphasis on providing a well balanced diet for pets, which is why the food they sell contains vitamins and all essential nutrients that dogs need.
+            </about>
+            <products>
+                <product>
+                    <productName>Brit Vitamins - Multivitamin 150g</productName>
+                    <price>59.00</price>
+                    <link source="https://karmybrit.pl/brit-care-cat-paste-anti-hairball-with-taurine-pasta-dla-doroslych-kotow-odklaczajaca-z-tauryna-100g-6.html">product page</link>
+                </product>
+                <product>
+                    <productName>BRIT CARE DOG CRUNCHY CRACKER INSECT AND SALMON 200g </productName>
+                    <price>17.00</price>
+                    <link source="https://karmybrit.pl/brit-care-dog-crunchy-cracker-insects-rich-in-salmon-enriched-with-thyme.html">product page</link>
+                </product>
+                <product>
+                    <productName>Brit Premium by Nature Lamb with Buckwheat 400g</productName>
+                    <price>6.10  </price>
+                    <link source="https://karmybrit.pl/brit-premium-by-nature-lamb-with-buckwheat.html">product page</link>
+                </product>
+                <product>
+                    <productName>BRIT CARE DOG FUNCTIONAL SNACK SHRIMP ANTISTRESS 150G</productName>
+                    <price>15.00</price>
+                    <link source="https://karmybrit.pl/brit-care-dog-functional-snack-shrimp-antistress-150g.html">product page</link>
+                </product>
+                <product>
+                    <productName>BRIT FRESH chicken with potatoes for puppies of all breeds 2,5kg</productName>
+                    <price>58.00</price>
+                    <link source="https://karmybrit.pl/brit-fresh-kurczak-z-ziemniakami-dla-szczeniat-wszystkich-ras.html">product page</link>
+                </product>
+            </products>
+        </brand>
+
+
+    </brands>
+
+</dogpedia>

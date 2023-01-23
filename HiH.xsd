@@ -1,0 +1,253 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified">
+    <xs:element name="dogpedia" type="dogpediaType" />
+
+    <xs:complexType name="dogpediaType">
+        <xs:sequence>
+            <xs:element name="author" type="authorType" />
+            <xs:element name="dogs" type="dogsType" />
+            <xs:element name="brands" type="brandsType" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="authorType">
+        <xs:all>
+            <xs:element ref="name" />
+            <xs:element name="surname" type="xs:string" />
+            <xs:element name="number" type="numberType" />
+            <xs:element name="group" type="xs:integer" />
+        </xs:all>
+        <xs:attribute ref="liked" use="required" />
+    </xs:complexType>
+
+    <xs:complexType name="dogsType">
+        <xs:sequence>
+            <xs:element name="blue">
+                <xs:complexType>
+                    <xs:complexContent>
+                        <xs:extension base="dogType">
+                            <xs:sequence>
+                                <xs:element name="dailyroutine">
+                                    <xs:complexType>
+                                        <xs:sequence>
+                                            <xs:element name="excercise">
+                                                <xs:complexType>
+                                                    <xs:sequence>
+                                                        <xs:element name="walks" type="xs:string" />
+                                                        <xs:element name="playing" type="xs:string" />
+                                                    </xs:sequence>
+                                                </xs:complexType>
+                                            </xs:element>
+                                            <xs:element name="meals">
+                                                <xs:complexType>
+                                                    <xs:sequence>
+                                                        <xs:element name="description" type="xs:string" />
+                                                        <xs:element name="times">
+                                                            <xs:simpleType>
+                                                                <xs:restriction>
+                                                                    <xs:simpleType>
+                                                                        <xs:list>
+                                                                            <xs:simpleType>
+                                                                                <xs:restriction base="xs:time">
+                                                                                    <xs:minInclusive value="05:00:00" />
+                                                                                </xs:restriction>
+                                                                            </xs:simpleType>
+                                                                        </xs:list>
+                                                                    </xs:simpleType>
+                                                                    <xs:length value="3" />
+                                                                </xs:restriction>
+                                                            </xs:simpleType>
+                                                        </xs:element>
+                                                    </xs:sequence>
+                                                </xs:complexType>
+                                            </xs:element>
+                                            <xs:element name="sleep">
+                                                <xs:complexType>
+                                                    <xs:sequence>
+                                                        <xs:element name="amount" type="xs:string" />
+                                                        <xs:element name="places">
+                                                            <xs:complexType>
+                                                                <xs:sequence>
+                                                                    <xs:element name="place" maxOccurs="unbounded">
+                                                                        <xs:complexType>
+                                                                            <xs:simpleContent>
+                                                                                <xs:extension base="xs:string">
+                                                                                    <xs:attribute name="daytime" use="required" type="ynType" />
+                                                                                    <xs:attribute name="nighttime" use="required" type="ynType" />
+                                                                                </xs:extension>
+                                                                            </xs:simpleContent>
+                                                                        </xs:complexType>
+                                                                    </xs:element>
+                                                                </xs:sequence>
+                                                            </xs:complexType>
+                                                        </xs:element>
+                                                    </xs:sequence>
+                                                </xs:complexType>
+                                            </xs:element>
+                                        </xs:sequence>
+                                    </xs:complexType>
+                                </xs:element>
+                            </xs:sequence>
+                        </xs:extension>
+                    </xs:complexContent>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="dog" type="dogType" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="brandsType">
+        <xs:sequence>
+            <xs:element name="brand" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="name" />
+                        <xs:element name="about">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:minLength value="100" />
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="products">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="product" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                            <xs:sequence>
+                                                <xs:element name="productName" type="xs:string" />
+                                                <xs:element name="price" type="priceType" />
+                                                <xs:element name="link" type="imglinkType" />
+                                            </xs:sequence>
+                                        </xs:complexType>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                    <xs:attribute name="category" use="required">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:enumeration value="accessories" />
+                                <xs:enumeration value="food and treats" />
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:attribute>
+                    <xs:attribute ref="liked" use="required" />
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="dogType">
+        <xs:sequence>
+            <xs:element ref="name" />
+            <xs:element name="breed">
+                <xs:complexType>
+                    <xs:choice>
+                        <xs:element name="known" type="xs:string" />
+                        <xs:element name="unknown">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="unknown" />
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                    </xs:choice>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="image" type="imglinkType" minOccurs="0" maxOccurs="1" />
+            <xs:element name="birth" type="xs:gYear" />
+            <xs:element name="death" type="xs:gYear" minOccurs="0" maxOccurs="1" />
+            <xs:element name="color" type="xs:string" />
+            <xs:element name="home" type="xs:string" />
+            <xs:element name="friends" minOccurs="0" maxOccurs="1">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="friend" type="nameType" maxOccurs="unbounded" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="enemies" minOccurs="0" maxOccurs="1">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="enemy" type="nameType" maxOccurs="unbounded" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="nicknames" minOccurs="0" maxOccurs="1">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="nickname" type="xs:string" maxOccurs="unbounded" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="cuddly" type="xs:boolean" />
+        </xs:sequence>
+        <xs:attributeGroup ref="dogAttributes" />
+    </xs:complexType>
+
+    <xs:complexType name="imglinkType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="source" type="xs:anyURI" use="required" />
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:simpleType name="priceType">
+        <xs:restriction base="xs:decimal">
+            <xs:fractionDigits value="2" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="ynType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="yes" />
+            <xs:enumeration value="no" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="nameType">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="10" />
+            <xs:minLength value="1" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="numberType">
+        <xs:restriction base="xs:integer">
+            <xs:pattern value="[0-9][0-9][0-9][0-9][0-9][0-9]" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="earsType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="droopy" />
+            <xs:enumeration value="upright" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="notNegativeType">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="0" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:attributeGroup name="dogAttributes">
+        <xs:attribute name="alive" use="required" type="ynType" />
+        <xs:attribute name="paws" use="required" type="notNegativeType"></xs:attribute>
+        <xs:attribute name="tails" use="required" type="notNegativeType"></xs:attribute>
+        <xs:attribute name="ears" use="required">
+            <xs:simpleType>
+                <xs:union memberTypes="earsType ynType" />
+            </xs:simpleType>
+        </xs:attribute>
+        <xs:attribute name="bark" use="required" type="ynType" />
+    </xs:attributeGroup>
+
+    <xs:attribute name="liked" type="ynType" />
+
+    <xs:element name="name" type="nameType" />
+
+</xs:schema>

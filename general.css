@@ -1,0 +1,80 @@
+#menu ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgb(194, 193, 193);
+    height: 4.1vw;
+    padding-right: 15.5vw;
+    padding-left: 15.5vw;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.25vw;
+    border: 0.15vw black solid;
+    color: rgb(49, 49, 49);
+    list-style-type: none;
+}
+
+#menu a{
+    text-decoration: none;
+    color: rgb(49, 49, 49);
+    padding: 0.7vw;
+}
+
+.active, #menu a:hover{
+    background-color: rgb(160, 160, 160);
+    border-radius: 1vw;
+}
+
+#sub-menu-1{
+    display: none;
+}
+
+#menu ul li:hover #sub-menu-1{
+    display: block;
+    position: absolute;
+    background:rgb(194, 193, 193);
+    margin-top: 0.7vw;
+    margin-left: -0.7vw;
+    height: 12.2vw;
+}
+
+
+#menu ul li:hover #sub-menu-1 ul{
+    display: block;
+    padding-left: 0;
+    padding-right: 0;
+    border: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.13vw;
+}
+
+#menu ul li:hover #sub-menu-1 ul li{
+  padding: 0.8vw;
+  border-bottom: 1px dotted black;
+}
+
+#menu ul li:hover #sub-menu-1 ul li:last-child{
+    border-bottom: none;
+  }
+
+footer{
+    color: white;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: 1.5vw;
+    background: #000;
+    height: 2.06vw;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9vw;
+}
+
+@media only screen and (max-width: 700px) {
+    #menu ul {flex-direction: column; height: 28vw;}
+    #menu ul li:hover #sub-menu-1 ul{height: 18vw; font-size: 2vw;}
+    #menu ul{font-size: 2.25vw;}
+    .active, #menu a:hover{border-radius: 1.5vw;}
+    header{font-size: 2.25vw; height: 12vw;}
+    footer{height: 4vw; font-size: 1.8vw}
+    body{overflow: scroll;}
+ }

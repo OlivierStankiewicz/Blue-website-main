@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="contact.css" />
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+    <link rel="stylesheet" href="general.css" />
+    <title>kontakt</title>
+  </head>
+  <body id="body">
+    <header id="header"><h1>Kontakt</h1></header>
+    <nav id="menu">
+      <ul>
+        <li>
+          <a href="index.html" id="index"><strong>STRONA GŁÓWNA</strong></a>
+        </li>
+        <li>
+          <a href="about.html" id="about"><strong>O BLUE∇</strong></a>
+          <div id="sub-menu-1">
+            <ul>
+              <li><a href="about.html#biography">ŻYCIORYS</a></li>
+              <li><a href="about.html#day-in-the-life">DZIEŃ Z ŻYCIA</a></li>
+              <li><a href="about.html#barklist">NA CO SZCZEKA?</a></li>
+              <li><a href="about.html#names">LISTA IMION BLUE</a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="gallery.html" id="gallery"><strong>GALERIA</strong></a>
+        </li>
+        <li>
+          <a href="https://instagram.com/blueberry.maltipoo" id="instagram"
+            ><strong>INSTAGRAM</strong></a
+          >
+        </li>
+        <li>
+          <a href="#" class="active" id="contact"><strong>KONTAKT</strong></a>
+        </li>
+        <li id="darkButton"></li>
+      </ul>
+    </nav>
+    <div id="content">
+      <div id="form-container">
+        <div id="title">
+          <p>Chcesz poznać swojego psa z Blue?</p>
+          <p>Wypełnij nasz formularz kontaktowy</p>
+          <p>A my odezwiemy się do ciebie!</p>
+        </div>
+
+        <div id="form">
+          <form action="action.php" method="POST">
+            <label for="name">Imię Twojego psa:</label><br />
+            <input type="text" id="name" name="name" /><br />
+            <label for="breed">Rasa:</label><br />
+            <input type="text" name="breed" id="breed" /> <br />
+            <label for="age">Ile twój pies ma lat:</label><br />
+            <input type="number" name="age" id="age" /> <br />
+            <label for="email-adress">Twój adres email:</label><br />
+            <input type="email" name="email-adress" id="email-adress" /> <br />
+
+            <p>Płeć Twojego psa</p>
+            <input type="radio" name="gender" id="male" value="male" />
+            <label for="male">On</label> <br />
+            <input type="radio" name="gender" id="female" value="female" />
+            <label for="female">Ona</label><br />
+
+            <p>Czy pies jest szczepiony?</p>
+            <input type="radio" name="vax" id="vyes" value="vyes" />
+            <label for="vyes">Tak</label> <br />
+            <input type="radio" name="vax" id="vno" value="vno" />
+            <label for="vno">Nie</label><br />
+
+            <p>Co chcesz zrobić?</p>
+            <input type="checkbox" id="opcja1" name="opcja1" value="walk" />
+            <label for="opcja1">Wspólny spacer</label><br />
+            <input type="checkbox" id="opcja2" name="opcja2" value="dog-park" />
+            <label for="opcja2">Spotkanie na psim wybiegu</label><br />
+            <br />
+
+            <input type="submit" value="submit" />
+            <input type="reset" value="reset" />
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>Copyright © Olivier Stankiewicz 2022</p>
+    </footer>
+  </body>
+</html>

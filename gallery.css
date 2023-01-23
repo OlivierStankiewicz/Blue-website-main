@@ -1,0 +1,62 @@
+body{
+    overflow: scroll;
+    background-size: cover;
+    margin: 0 0 0 0;
+    background-repeat: no-repeat;
+    background-color: white;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+#gallery-container{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+#menu ul{
+    margin-top: 0;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vw;
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.545vw;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: rgb(49, 49, 49);
+    background-image: url("img/borówki2.jpg");
+}
+
+#image-grid{
+    width: 91.8vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    row-gap: 3.9vw;
+    column-gap: 4.1vw;
+    margin-left: 4.1vw;
+    margin-right: 4.1vw;
+    margin-top: 2.8vw;
+}
+
+.zdj-gal{
+    width: 15vw;
+}
+
+.zdj-gal img{
+    width: 15vw;
+    cursor: pointer;
+    border-radius: 0.8vw;
+    transition: width 1s;
+    transition-delay: 0.5s;
+}
+
+.zdj-gal img:hover{
+    width: 18vw;
+}

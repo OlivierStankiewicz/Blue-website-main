@@ -1,0 +1,53 @@
+body{
+    overflow: scroll;
+    background-size: cover;
+    margin: 0 0 0 0;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url("img/borówki2.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    color: rgb(49, 49, 49);
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 6.51vw;
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.27vw;
+    color: rgb(49, 49, 49);
+}
+
+#content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#form-container{
+    background: white;
+    height: 482px;
+    width: 341px;
+    padding: 2vw;
+    border: 1px rgb(49, 49, 49) solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 15px;
+}
+
+#title p{
+    text-align: center;
+    margin: 0 0 0 0;
+}
+
+@media only screen and (max-width: 700px) {
+    footer p{display: none}
+}
